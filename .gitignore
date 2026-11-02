@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Django
+.env
+.venv/
+venv/
+staticfiles/
+media/
+
+# Node / React
+node_modules/
+dist/
+build/
+
+# Environment variables
+.env.*
+!.env.example
+
+# Editors
+.vscode/
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db
