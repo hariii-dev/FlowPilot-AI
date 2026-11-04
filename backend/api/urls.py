@@ -1,6 +1,14 @@
 from django.urls import path
-from .views import home
+from .views import home, RegisterView
+from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework_simplejwt.views import TokenRefreshView
+from .views import home, RegisterView, LogoutView
 
 urlpatterns = [
     path('', home, name='api-home'),
+    path('register/', RegisterView.as_view(), name='register'),
+    path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('logout/', LogoutView.as_view(), name='logout'),
 ]
+
