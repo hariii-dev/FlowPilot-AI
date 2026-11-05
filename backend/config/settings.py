@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'api',
     'accounts',
+    'organizations',
     'rest_framework_simplejwt.token_blacklist',
+    'workflows.apps.WorkflowsConfig',
+    'tickets',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
